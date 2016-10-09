@@ -9,13 +9,13 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       flash[:error] = "Something doesn't add up! Check your email and password."
-      redirect_to '/login'
+      redirect_to '/sessions/new'
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/login'
+    redirect_to '/sessions/new'
   end
 
   private

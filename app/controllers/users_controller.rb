@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       flash[:error] = "Something doesn't seem right. Make sure you include a username and email."
-      redirect_to '/signup'
+      redirect_to '/users/new'
     end
   end
 
